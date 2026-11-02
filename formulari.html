@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'Inscripció</title>
+</head>
+<body>
+
+    <form action="#" method="POST">
+
+        <!-- BLOC 1: DADES PERSONALS -->
+        <fieldset>
+            <legend>Dades Personals</legend>
+            
+            <p>
+                <label Aksfor="nom-cognoms">Nom i Cognoms *:</label>
+                <input type="text" id="nom-cognoms" name="nom_cognoms" placeholder="Ex: John Doe" required>
+            </p>
+            
+            <p>
+                <label for="correu">Correu electrònic *:</label>
+                <input type="email" id="correu" name="correu" placeholder="Ex: johndoe@exemple.com" required>
+            </p>
+            
+            <p>
+                <label for="contrasenya">Contrasenya (mínim 8 caràcters) *:</label>
+                <input type="password" id="contrasenya" name="contrasenya" minlength="8" placeholder="Introdueix la teva contrasenya" required>
+            </p>
+            
+            <p>
+                <label for="data-naixement">Data de naixement:</label>
+                <input type="date" id="data-naixement" name="data_naixement">
+            </p>
+            
+            <p>
+                <label for="edat">Edat (entre 16 i 99 anys):</label>
+                <input type="number" id="edat" name="edat" min="16" max="99" placeholder="Ex: 25">
+            </p>
+        </fieldset>
+
+        <!-- BLOC 2: DADES ACADÈMIQUES I PREFERÈNCIES -->
+        <fieldset>
+            <legend>Dades Acadèmiques i Preferències</legend>
+            
+            <p>
+                <label>Torn d'estudi:</label><br>
+                <input type="radio" id="torn-mati" name="torn_estudi" value="mati">
+                <label for="torn-mati">Matí</label><br>
+                <input type="radio" id="torn-tarda" name="torn_estudi" value="tarda">
+                <label for="torn-tarda">Tarda</label>
+            </p>
+            
+            <p>
+                <label>Mòduls matriculats:</label><br>
+                <input type="checkbox" id="modul-marques" name="moduls[]" value="marques">
+                <label for="modul-marques">Llenguatges de Marques</label><br>
+                
+                <input type="checkbox" id="modul-programacio" name="moduls[]" value="programacio">
+                <label for="modul-programacio">Programació</label><br>
+                
+                <input type="checkbox" id="modul-bd" name="moduls[]" value="bases_dades">
+                <label for="modul-bd">Bases de Dades</label>
+            </p>
+            
+            <p>
+                <label for="nivell-experiencia">Nivell d'experiència prèvia:</label>
+                <select id="nivell-experiencia" name="nivell_experiencia">
+                    <option value="sense_experiencia">Sense experiència</option>
+                    <option value="basic">Bàsic</option>
+                    <option value="intermedi">Intermedi</option>
+                    <option value="avancat">Avançat</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- BLOC 3: OBSERVACIONS I BOTONS -->
+        <fieldset>
+            <legend>Observacions i Botons</legend>
+            
+            <p>
+                <label for="comentaris">Comentaris / Biografia:</label><br>
+                <textarea id="comentaris" name="comentaris" rows="4" cols="40" placeholder="Escriu aquí la teva biografia o comentaris..."></textarea>
+            </p>
+            
+            <p>
+                <input type="checkbox" id="acceptacio-termes" name="acceptacio_termes" required>
+                <label for="acceptacio-termes">Accepto la política de privacitat *</label>
+            </p>
+            
+            <p>
+                <button type="submit">Enviar dades</button>
+                <button type="reset">Restablir dades</button>
+            </p>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
